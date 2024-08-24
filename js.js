@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
         contacts = [];
         updateContactList();
     });
-    function deleteAll() {
+    function deleteAllBtn() {
   let isOk = confirm("Are you sure?");
   if (isOk) {
     list.innerHTML =
