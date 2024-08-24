@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
         contacts = [];
         updateContactList();
     });
-    function dltAll() {
+    function deleteAll() {
   let isOk = confirm("Are you sure?");
   if (isOk) {
     list.innerHTML =
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 }
 
-function dltContact(ind) {
+function deleteContact(ind) {
   let isOk = confirm("Are you sure?");
   if (isOk) {
     users = users.slice(0, ind).concat(users.slice(ind + 1))
