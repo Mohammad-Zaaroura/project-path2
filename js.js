@@ -26,6 +26,32 @@ document.addEventListener("DOMContentLoaded", () => {
         contacts = [];
         updateContactList();
     });
+    function dltAll() {
+  let isOk = confirm("Are you sure?");
+  if (isOk) {
+    list.innerHTML =
+      `
+    <p id="inner"> No contacts were added  </p>
+    
+    `
+    users = [];
+  }
+}
+
+function dltContact(ind) {
+  let isOk = confirm("Are you sure?");
+  if (isOk) {
+    users = users.slice(0, ind).concat(users.slice(ind + 1))
+    list.innerHTML = ``;
+    users.forEach((contact, ind) => addContact(contact, ind))
+    if (users.length === 0)
+      list.innerHTML =
+        `
+        <p id="inner"> No contacts were added  </p>
+
+        `
+  }
+}
 
     function showAddContactForm(contact = {}, index = null) {
         openModal(`
