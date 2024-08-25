@@ -73,6 +73,12 @@ h1 {
     flex-grow: 1;
 }
 
+ #footer{
+display: flex;
+align-items: center;
+justify-content: center;
+  }
+
 .name {
     font-size: 1.2em;
     font-weight: bold;
